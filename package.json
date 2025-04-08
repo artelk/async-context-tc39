@@ -1,6 +1,6 @@
 {
   "name": "async-context-tc39",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "AsyncContext (implementation for TC39)",
   "type": "module",
   "main": "index.js",
@@ -13,9 +13,16 @@
   },
   "author": "Artem Elkin",
   "license": "MIT",
+  "keywords": [
+    "async-context",
+    "tc39",
+    "AsyncContext",
+    "AsyncLocal"
+  ],
   "devDependencies": {
     "@types/node": "^22.13.14",
     "eslint": "^9.23.0",
+    "eslint-plugin-async-context-tc39": "^1.0.2",
     "typescript-eslint": "^8.28.0",
     "vite": "^6.2.3",
     "vitest": "^3.0.9"

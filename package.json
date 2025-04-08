@@ -1,6 +1,6 @@
 {
   "name": "async-context-tc39",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "AsyncContext (implementation for TC39)",
   "type": "module",
   "main": "index.js",
@@ -12,6 +12,10 @@
     "test": "vitest run"
   },
   "author": "Artem Elkin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artelk/async-context-tc39.git"
+  },
   "license": "MIT",
   "keywords": [
     "async-context",

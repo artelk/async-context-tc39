@@ -1,6 +1,6 @@
 {
   "name": "async-context-tc39",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "AsyncContext (implementation for TC39)",
   "type": "module",
   "main": "index.js",

@@ -1,0 +1,26 @@
+{
+  "name": "async-context-tc39",
+  "version": "1.0.1",
+  "description": "AsyncContext (implementation for TC39)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "compile": "rm -rf dist && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
+    "compile:esm": "tsc -p tsconfig.esm.json",
+    "compile:cjs": "tsc -p tsconfig.cjs.json && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
+    "lint": "eslint .",
+    "test": "vitest run"
+  },
+  "author": "Artem Elkin",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "eslint": "^9.23.0",
+    "typescript-eslint": "^8.28.0",
+    "vite": "^6.2.3",
+    "vitest": "^3.0.9"
+  },
+  "dependencies": {
+    "immutable": "^5.1.1"
+  }
+}

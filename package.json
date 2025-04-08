@@ -1,9 +1,8 @@
 {
   "name": "async-context-tc39",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "AsyncContext (implementation for TC39)",
   "type": "module",
-  "main": "index.js",
   "scripts": {
     "compile": "rm -rf dist && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
     "compile:esm": "tsc -p tsconfig.esm.json",
@@ -11,6 +10,36 @@
     "lint": "eslint .",
     "test": "vitest run"
   },
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      },
+      "default": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./*": {
+      "require": {
+        "types": "./dist/cjs/*.d.ts",
+        "default": "./dist/cjs/*.js"
+      },
+      "default": {
+        "types": "./dist/*.d.ts",
+        "default": "./dist/*.js"
+      }
+    }
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
   "author": "Artem Elkin",
   "repository": {
     "type": "git",
